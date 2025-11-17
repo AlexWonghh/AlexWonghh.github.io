@@ -1,7 +1,15 @@
-<!DOCTYPE html><html lang="en"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="x-poe-datastore-behavior" content="local_only">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Wong | Data Analyst Portfolio</title>
+  
+  <!-- Font Awesome for clean icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     /* Reset and Base Styles */
     * {
@@ -45,6 +53,18 @@
       font-weight: bold;
     }
 
+    .social-icons a {
+      color: #00ffe7;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      transition: all 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ff00c8;
+      transform: scale(1.2);
+    }
+
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
@@ -63,7 +83,7 @@
 
     .card {
       background: #1a1a1a;
-      padding: 1rem;
+      padding: 1.5rem;
       border-radius: 8px;
       margin: 1rem 0;
       box-shadow: 0 0 10px rgba(0,255,231,0.1);
@@ -85,6 +105,26 @@
       border: 1px solid #00ffe7;
     }
 
+    .profile-links {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .profile-links a {
+      margin: 0 2rem;
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: rgba(0, 255, 231, 0.1);
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+
+    .profile-links a:hover {
+      background: rgba(0, 255, 231, 0.2);
+      transform: translateY(-3px);
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -92,7 +132,6 @@
       border-top: 1px solid #1f1f1f;
     }
 
-    /* Particle background effect */
     #particles-js {
       position: fixed;
       top: 0;
@@ -107,11 +146,17 @@
         margin: 0 0.5rem;
         font-size: 0.9rem;
       }
+      .profile-links a {
+        display: block;
+        margin: 1rem auto;
+        max-width: 280px;
+      }
     }
   </style>
-<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+</head>
 <body>
   <div id="particles-js"></div>
+
   <header>
     <h1>Alex Wong</h1>
     <nav>
@@ -121,6 +166,14 @@
       <a href="#hobbies">Hobbies</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/alex-wong-059304230" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/AlexWonghh" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </header>
 
   <section id="about">
@@ -143,16 +196,33 @@
 
   <section id="projects">
     <h2>My Projects</h2>
+
+    <!-- LinkedIn & GitHub Links Card -->
+    <div class="card profile-links">
+      <p style="font-size: 1.2rem; margin-bottom: 1rem; color: #aaa;">
+        Explore more of my work and connect with me:
+      </p>
+      <a href="https://www.linkedin.com/in/alex-wong-059304230" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/AlexWonghh" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+
     <div class="card">
-      <h3>📊 Analysing Olympics Dataset with Python</h3>
+      <h3>Analysing Olympics Dataset with Python</h3>
       <p>Explored trends, medal tallies, and athlete performance using pandas and matplotlib.</p>
     </div>
+    
     <div class="card">
-      <h3>🌡️ Collecting &amp; Analyzing Global Warming</h3>
-      <p>Gathered and studied climate data to visualize global warming patterns. <br>GitHub: <a href="https://github.com/AlexWonghh/Weather-analysis" target="_blank">Weather Analysis</a></p>
+      <h3>Collecting &amp; Analyzing Global Warming</h3>
+      <p>Gathered and studied climate data to visualize global warming patterns.<br>
+      GitHub: <a href="https://github.com/AlexWonghh/Weather-analysis" target="_blank">Weather Analysis</a></p>
     </div>
+    
     <div class="card">
-      <h3>📱 Income and Mobile Usage Analysis</h3>
+      <h3>Income and Mobile Usage Analysis</h3>
       <p>Used Python and pandas to correlate income levels with phone usage across regions.</p>
     </div>
   </section>
@@ -166,7 +236,7 @@
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>📧 alexwong081801@gmail.com</p>
+    <p>📧 <a href="mailto:alexwong081801@gmail.com">alexwong081801@gmail.com</a></p>
     <p>Let's connect and make data tell powerful stories!</p>
   </section>
 
@@ -179,26 +249,11 @@
   <script>
     particlesJS("particles-js", {
       "particles": {
-        "number": {
-          "value": 90,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
+        "number": { "value": 90, "density": { "enable": true, "value_area": 800 } },
         "color": { "value": "#00ffe7" },
-        "shape": {
-          "type": "circle",
-          "stroke": { "width": 0, "color": "#000" }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false
-        },
-        "size": {
-          "value": 3,
-          "random": true
-        },
+        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000" } },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 3, "random": true },
         "line_linked": {
           "enable": true,
           "distance": 150,
@@ -206,28 +261,20 @@
           "opacity": 0.4,
           "width": 1
         },
-        "move": {
-          "enable": true,
-          "speed": 3
-        }
+        "move": { "enable": true, "speed": 3 }
       },
       "interactivity": {
         "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" }
-        },
+        "events": { "onhover": { "enable": true, "mode": "grab" } },
         "modes": {
           "grab": {
             "distance": 140,
-            "line_linked": {
-              "opacity": 0.8
-            }
+            "line_linked": { "opacity": 0.8 }
           }
         }
       },
       "retina_detect": true
     });
   </script>
-
-
-</body></html>
+</body>
+</html>
